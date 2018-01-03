@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:descendantFocusability="afterDescendants"
+    android:id="@+id/rtv_item">
+    <ImageView
+        android:id="@+id/add_img"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="center"
+        android:focusable="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+
+        android:src="@mipmap/ic_add"/>
+
+    <TextView
+        android:id="@+id/channel_name"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/add_img"
+        android:text="待选频道"
+        android:layout_marginLeft="10dp"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/img_new_channel_func"
+        android:layout_width="25dp"
+        android:layout_height="15dp"
+        android:visibility="visible"
+        android:src="@mipmap/newicon"
+        android:layout_alignTop="@id/add_img"
+        android:layout_toRightOf="@+id/channel_name" />
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_query_comment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.chinaso.toutiao.view.CustomActionBar
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.chinaso.toutiao.view.BaseWebView
+        android:id="@+id/webviewComment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/actionbar"
+        android:layout_marginBottom="0dp" />
+
+    <!--<include-->
+    <!--android:id="@+id/default_layout"-->
+    <!--layout="@layout/webviewdefault" />-->
+    <com.chinaso.toutiao.view.NetWorkErrorView
+        android:id="@+id/default_errorview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/comment_layout"
+        android:background="#efefef"
+        android:visibility="gone" />
+    <!--是否visible有url控制，默认gone-->
+    <LinearLayout
+        android:id="@+id/comment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#efefef"
+        android:baselineAligned="false"
+        android:paddingBottom="3dp"
+        android:paddingRight="2dp"
+        android:paddingTop="2dp"
+        android:visibility="gone">
+
+        <com.chinaso.toutiao.view.CommentToolBar
+            android:id="@+id/comment_toolbar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/nightmode"
+        style="@style/night_mode_style" />
+</RelativeLayout>

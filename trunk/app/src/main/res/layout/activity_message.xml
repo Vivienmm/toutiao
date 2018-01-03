@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_message"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.chinaso.toutiao.mvp.ui.activity.MessageActivity">
+
+    <com.chinaso.toutiao.view.CustomActionBar
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.chinaso.toutiao.view.BaseWebView
+        android:id="@+id/msgWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/actionbar" />
+
+    <View style="@style/night_mode_style"
+        android:id="@+id/nightmode"/>
+</RelativeLayout>

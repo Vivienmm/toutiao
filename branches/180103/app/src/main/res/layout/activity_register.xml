@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.chinaso.toutiao.mvp.ui.activity.LoginActivity">
+
+    <com.chinaso.toutiao.view.CustomActionBar
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actionbar"
+        android:layout_marginTop="15dp"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_show_account"
+                style="@style/register_login_text"
+                android:text="@string/register_phone" />
+
+            <EditText
+                android:id="@+id/register_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="45dp"
+                android:layout_toRightOf="@id/tv_show_account"
+                android:background="@null"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="@color/menu_bg" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_line1"
+            style="@style/register_input_divider"
+            android:layout_below="@id/rl_account" />
+
+        <RelativeLayout
+            android:id="@+id/rl_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_line1"
+            android:layout_marginTop="35dp">
+
+            <TextView
+                android:id="@+id/tv_show_password"
+                style="@style/register_login_text"
+                android:text="@string/register_pwd" />
+
+            <EditText
+                android:id="@+id/register_sms_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/tv_get_password"
+                android:layout_toRightOf="@+id/tv_show_password"
+                android:background="@null"
+                android:inputType="number"
+                android:padding="5dp"
+                android:textColor="@color/menu_bg" />
+
+            <TextView
+                android:id="@+id/tv_get_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/register_button_getpwd"
+                android:clickable="true"
+                android:gravity="center"
+                android:layerType="software"
+                android:padding="8dp"
+                android:text="@string/register_get_pwd"
+                android:textColor="@color/txt_btn_search" />
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/view_line2"
+            style="@style/register_input_divider"
+            android:layout_below="@id/rl_password" />
+
+        <RelativeLayout
+            android:id="@+id/rl_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_line2"
+            android:layout_marginTop="35dp">
+
+            <TextView
+                android:id="@+id/tv_register_pwd"
+                style="@style/register_login_text"
+                android:text="@string/register_set_pwd" />
+
+            <EditText
+                android:id="@+id/register_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:layout_toRightOf="@id/tv_register_pwd"
+                android:background="@null"
+                android:inputType="textPassword"
+                android:padding="5dp"
+                android:textColor="@color/menu_bg" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_line3"
+            style="@style/register_input_divider"
+            android:layout_below="@id/rl_pwd" />
+
+        <RelativeLayout
+            android:id="@+id/rl_confirm_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_line3"
+            android:layout_marginTop="35dp">
+
+            <TextView
+                android:id="@+id/tv_register_confirm_pwd"
+                style="@style/register_login_text"
+                android:text="@string/register_get_confirmpwd" />
+
+            <EditText
+                android:id="@+id/register_confirm_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_toRightOf="@id/tv_register_confirm_pwd"
+                android:background="@null"
+                android:inputType="textPassword"
+                android:padding="5dp"
+                android:textColor="@color/menu_bg" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_line4"
+            style="@style/register_input_divider"
+            android:layout_below="@id/rl_confirm_pwd" />
+
+        <Button
+            android:id="@+id/register"
+            style="@style/register_login_button"
+            android:layout_below="@id/view_line4"
+            android:enabled="false"
+            android:text="@string/register" />
+
+        <RelativeLayout
+            android:id="@+id/rl_server"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/register"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/tv_register_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_agree_server"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/register_server"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_register_agree"
+                android:clickable="true"
+                android:text="@string/chinaso_server_agree"
+                android:textColor="@color/txt_btn_search"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/register_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:text="@string/login"
+                android:textColor="@color/bg_btn_update"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View style="@style/night_mode_style"
+        android:id="@+id/nightmode"/>
+</RelativeLayout>

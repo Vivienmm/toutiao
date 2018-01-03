@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:name="com.chinaso.toutiao.mvp.ui.activity.MainActivity"
+    android:background="?attr/csbackground"
+    app:backgroundAttr="csbackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:id="@+id/bottom_bar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:baselineAligned="true"
+            android:padding="4dp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/home_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawablePadding="1dp"
+                android:drawableTop="@mipmap/menu_home_current"
+                android:gravity="center"
+                android:text="首页"
+                android:textColor="@color/menu_text_bg"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/video_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawablePadding="1dp"
+                android:drawableTop="@mipmap/menu_video"
+                android:gravity="center"
+                android:text="视频"
+                android:textColor="@color/menu_text_bg"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/theme_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawablePadding="1dp"
+                android:drawableTop="@mipmap/menu_theme"
+                android:gravity="center"
+                android:text="订阅"
+                android:textColor="@color/menu_text_bg"
+                android:textSize="12sp"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/my_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:drawablePadding="1dp"
+                android:drawableTop="@mipmap/menu_my"
+                android:gravity="center"
+                android:text="我"
+                android:textColor="@color/menu_text_bg"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/nightmode"
+        style="@style/night_mode_style" />
+
+</FrameLayout>

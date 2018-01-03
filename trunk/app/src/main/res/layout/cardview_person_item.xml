@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:layout_marginBottom="10dp"
+    android:clickable="true"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/introImageView"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/headImageView"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/qinghai" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/headImageView"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/profileInfoTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_toEndOf="@id/headImageView"
+            android:layout_toRightOf="@id/headImageView"
+            android:text="小海豚/游泳能手"
+            android:textColor="@color/black" />
+
+
+        <TextView
+            android:id="@+id/profileIntroTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/introImageView"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:lines="2"
+            android:text="我是一只可爱的小海豚，能够游泳，能够救人，还能够卖萌"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profileIntroTv"
+            android:gravity="fill_vertical"
+            android:paddingBottom="12dp">
+
+            <TextView
+                android:id="@+id/columnTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:text="健康"
+                android:textColor="@color/colorPrimary" />
+
+            <View
+                android:id="@+id/verticalLine01"
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_toEndOf="@id/columnTv"
+                android:layout_toRightOf="@id/columnTv"
+                android:background="@color/setting_bg"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/followNumTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/verticalLine01"
+                android:layout_toRightOf="@id/verticalLine01"
+                android:text="6.6万关注"
+                android:textColor="@color/txt_gray" />
+
+            <View
+                android:id="@+id/verticalLine02"
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_toEndOf="@+id/followNumTv"
+                android:layout_toRightOf="@+id/followNumTv"
+                android:background="@color/setting_bg"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/inquiryNumTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/verticalLine02"
+                android:layout_toRightOf="@id/verticalLine02"
+                android:text="2893提问"
+                android:textColor="@color/txt_gray" />
+
+            <TextView
+                android:id="@+id/followTv"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/follow_icon"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text=" + 关注 "
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

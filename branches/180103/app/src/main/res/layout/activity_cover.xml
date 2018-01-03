@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 第一种图片显示方式 -->
+    <ImageView
+        android:id="@+id/splashAdBkgImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:visibility="gone"
+        android:src="@mipmap/splash_adbg"/>
+
+    <ImageView
+        android:id="@+id/splashAdImg"
+        android:contentDescription="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- 第二种新闻显示方式 -->
+    <RelativeLayout
+        android:id="@+id/splashNewsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/ic_splash_chinaso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ic_rec_marginTop"
+            android:layout_marginBottom="@dimen/ic_splash_marginBottom"
+            android:background="@mipmap/ic_splash_chinaso"/>
+
+        <ImageView
+            android:id="@+id/ic_splash_rec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/ic_splash_rec"
+            android:layout_toRightOf="@id/ic_splash_chinaso"
+            android:layout_marginTop="@dimen/ic_rec_marginTop"
+            android:layout_marginLeft="@dimen/ic_rec_marginLeft"/>
+
+        <TextView
+            android:id="@+id/newsTitleTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:text="nnge"
+            android:layout_marginLeft="@dimen/txt_startup_marginLeft"
+            android:layout_marginRight="@dimen/txt_startup_marginRight"
+            android:layout_toRightOf="@id/ic_splash_rec"
+            android:textSize="@dimen/txt_startup_size"
+            android:textColor="@color/txt_startup_title" />
+    </RelativeLayout>
+
+    <View style="@style/night_mode_style"
+        android:id="@+id/nightmode"/>
+</RelativeLayout>

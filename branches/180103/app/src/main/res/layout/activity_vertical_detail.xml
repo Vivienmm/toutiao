@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_wb"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.chinaso.toutiao.view.CustomActionBar
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <com.chinaso.toutiao.view.BaseWebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/actionbar"
+        android:layout_marginBottom="0dp" />
+
+    <!--<include-->
+    <!--android:id="@+id/default_layout"-->
+    <!--layout="@layout/webviewdefault" />-->
+    <com.chinaso.toutiao.view.NetWorkErrorView
+        android:id="@+id/default_errorview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/share_layout"
+        android:background="@color/gray"
+        android:visibility="invisible" />
+
+    <!-- 是否visible有url控制，默认gone -->
+    <LinearLayout
+        android:id="@+id/share_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:paddingBottom="1dp">
+
+        <!--  <include
+              layout="@layout/share_toolbar"
+              android:baselineAligned="false" />-->
+
+        <com.chinaso.toutiao.view.ShareToolBar
+            android:id="@+id/share_toolBar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:visibility="gone" />
+
+        <com.chinaso.toutiao.view.CommentToolBar
+            android:id="@+id/comment_toolbar_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <View style="@style/night_mode_style"
+        android:id="@+id/nightmode"/>
+</RelativeLayout>

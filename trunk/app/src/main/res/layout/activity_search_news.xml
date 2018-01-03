@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_search_news"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.chinaso.toutiao.mvp.ui.activity.SearchNewsActivity">
+
+    <com.chinaso.toutiao.view.CustomActionBar
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:id="@+id/inputContentET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableLeft="@mipmap/search_icon"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:hint="请输入关键字..."
+            android:padding="8dp"
+            android:textColorHint="@color/gray" />
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/hotNewsWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="近期热词"
+            android:textColor="@color/menu_bg" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_search_box"
+            android:padding="6dp"
+            android:text="创业失败身体"
+            android:textColor="@color/menu_bg" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_search_box"
+            android:padding="6dp"
+            android:text="创业失败身体"
+            android:textColor="@color/menu_bg" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_search_box"
+            android:padding="6dp"
+            android:text="创业失败身体"
+            android:textColor="@color/menu_bg" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_search_box"
+            android:padding="6dp"
+            android:text="创业失败身体"
+            android:textColor="@color/menu_bg" />
+    </LinearLayout>
+
+    <com.chinaso.toutiao.view.BaseWebView
+        android:id="@+id/searchNewsWeb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+</LinearLayout>

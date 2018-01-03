@@ -1,0 +1,53 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- 版本更新 -->
+    <dimen name="txt_update_title_margin">8dp</dimen>
+    <dimen name="txt_update_log_margin">16dp</dimen>
+    <dimen name="check_ignore_update_margin">8dp</dimen>
+    <dimen name="btn_update_margin">8dp</dimen>
+    <dimen name="btn_cancel_margin">8dp</dimen>
+    <dimen name="txt_update_title_size">22sp</dimen>
+    <dimen name="txt_btn_update_size">14sp</dimen>
+    <dimen name="btn_update_height">40dp</dimen>
+    <dimen name="llayout_update_width">240dp</dimen>
+    <dimen name="btn_cancel_update_height">40dp</dimen>
+    <dimen name="dialog_update_corner">6dp</dimen>
+
+
+    <!--搜索输入页面
+    -->
+    <dimen name="llayout_top_bar_paddingTop">6dp</dimen>
+    <dimen name="layout_search_bar_height">53dp</dimen>
+    <dimen name="rlayout_search_bar_marginLeft">8dp</dimen>
+    <dimen name="btn_search_width">72dp</dimen>
+    <dimen name="txt_btn_search_size">21sp</dimen>
+    <dimen name="imgBtn_clear_input_marginRight">6dp</dimen>
+    <dimen name="edit_text_input_margin">2dp</dimen>
+    <dimen name="edit_text_input_paddingLeft">6dp</dimen>
+    <dimen name="rlayout_hotWors_marginTop">10dp</dimen>
+    <dimen name="vpager_hotWord_height">230dp</dimen>
+    <dimen name="ll_control_history_padding">5dp</dimen>
+    <dimen name="txt_btn_clear_history_size">16sp</dimen>
+    <dimen name="btn_switch_history_marginRight">60dp</dimen>
+    <dimen name="check_switch_history_marginTop">10dp</dimen>
+
+    <!--indicator-->
+    <dimen name="common_navigator_height">30dp</dimen>
+
+    <!-- 启动页标题 -->
+    <dimen name="txt_startup_marginLeft">8dp</dimen>
+    <dimen name="txt_startup_marginRight">4dp</dimen>
+    <dimen name="txt_startup_size">20sp</dimen>
+    <dimen name="ic_splash_marginBottom">50dp</dimen>
+    <dimen name="ic_rec_marginLeft">40dp</dimen>
+    <dimen name="ic_rec_marginTop">4dp</dimen>
+
+    <!-- 新闻列表 -->
+    <dimen name="newslist_title">16sp</dimen>
+    <dimen name="newslist_time">12sp</dimen>
+    <dimen name="newslist_img_width">104dp</dimen>
+    <dimen name="newslist_img_height">70dp</dimen>
+</resources>

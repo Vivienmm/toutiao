@@ -1,0 +1,94 @@
+#!/usr/bin/env bash
+
+##############################################################################
+##
+##  toutiao gradle wrapper script for UN*X
+##
+##############################################################################
+function assembleRelease(){
+echo "starting assembleRelease..."
+./gradlew assembleRelease
+}
+function installRelease(){
+echo "starting installRelease..."
+./gradlew assembleRelease
+adb install app/build/outputs/apk/app-001001_chinasoweb-release.apk
+}
+function assembleReleaseWithBundle(){
+echo "starting assembleReleaseWithBundle..."
+./auto-bundle.sh
+./gradlew assembleRelease
+}
+function installReleaseWithBundle(){
+echo "starting installReleaseWithBundle..."
+./auto-bundle.sh
+./gradlew assembleRelease
+adb install app/build/outputs/apk/app-001001_chinasoweb-release.apk
+}
+function assembleDebug(){
+echo "starting assembleDebug..."
+./gradlew assembleDebug
+}
+function installDebug(){
+echo "starting installDebug..."
+./gradlew assembleDebug
+adb install app/build/outputs/apk/app-001001_chinasoweb-debug.apk
+}
+function assembleDebugWithBundle(){
+echo "starting assembleDebugWithBundle..."
+./auto-bundle.sh
+./gradlew assembleDebug
+}
+function installDebugWithBundle(){
+echo "starting installDebugWithBundle..."
+./auto-bundle.sh
+./gradlew assembleDebug
+adb install app/build/outputs/apk/app-001001_chinasoweb-debug.apk
+}
+function installReleaseDirect(){
+echo "starting installReleaseDirect..."
+adb install app/build/outputs/apk/app-001001_chinasoweb-release.apk
+}
+function installDebugDirect(){
+echo "starting installDebugDirect..."
+adb install app/build/outputs/apk/app-001001_chinasoweb-debug.apk
+}
+function usage(){
+echo "tt_gradlew <subcommand>
+  all available subcommands:
+	assembleRelease
+	installRelease
+	installReleaseDirect
+	assembleReleaseWithBundle
+	installReleaseWithBundle
+	assembleDebug
+	installDebug
+	installDebugDirect
+	assembleDebugWithBundle
+	installDebugWithBundle"
+}
+
+if [ "$1" == "assembleRelease" ]; then	
+	assembleRelease
+elif [ "$1" == "installRelease" ]; then
+	installRelease
+elif [ "$1" == "assembleReleaseWithBundle" ]; then
+	assembleReleaseWithBundle
+elif [ "$1" == "installReleaseWithBundle" ]; then
+	installReleaseWithBundle
+elif [ "$1" == "assembleDebug" ]; then
+	assembleDebug
+elif [ "$1" == "installDebug" ]; then
+	installDebug
+elif [ "$1" == "assembleDebugWithBundle" ]; then
+	assembleDebugWithBundle
+elif [ "$1" == "installDebugWithBundle" ]; then
+	installDebugWithBundle
+elif [ "$1" == "installReleaseDirect" ]; then
+    installReleaseDirect
+elif [ "$1" == "installDebugDirect" ]; then
+    installDebugDirect
+else
+	usage
+fi
+

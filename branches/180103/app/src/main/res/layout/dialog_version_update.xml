@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_update_shape"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llayout_update"
+        android:layout_width="@dimen/llayout_update_width"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_newVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/txt_update_title_size"
+            android:layout_margin="@dimen/txt_update_title_margin"
+            android:textColor="@color/colorAccent"
+            android:background="@drawable/dialog_update_shape"
+            android:textStyle="bold"
+            android:text="@string/txt_update_title"/>
+
+        <View style="@style/version_update_divider" />
+
+        <TextView
+            android:id="@+id/txt_updateLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/txt_update_log_margin" />
+
+        <CheckBox
+            android:id="@+id/check_ignore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/checkbox_style"
+            android:drawablePadding="8dp"
+            android:button="@null"
+            android:layout_margin="@dimen/check_ignore_update_margin"
+            android:text="@string/check_ingore_update" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_install"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_update_height"
+                android:layout_weight="1"
+                android:textSize="@dimen/txt_btn_update_size"
+                android:layout_margin="@dimen/btn_update_margin"
+                android:background="@color/colorAccent"
+                android:textColor="@color/white"
+                android:text="@string/txt_btn_update" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_cancel_update_height"
+                android:layout_weight="1"
+                android:textSize="@dimen/txt_btn_update_size"
+                android:background="@color/bg_btn_cancel_update"
+                android:layout_margin="@dimen/btn_cancel_margin"
+                android:text="@string/txt_btn_cancel" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.chinaso.toutiao.mvp.ui.fragment.TextSizeDialog">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="20dp"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:text="正文字号"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:id="@+id/tvSizeRG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/sBigRadio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" 特大号字"
+                android:textSize="19sp" />
+            <RadioButton
+                android:id="@+id/bigRadio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" 大号字"
+                android:textSize="19sp" />
+
+            <RadioButton
+                android:id="@+id/middleRadio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=" 中号字"
+                android:textSize="19sp" />
+
+            <RadioButton
+                android:id="@+id/smallRadio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=" 小号字"
+                android:textSize="19sp" />
+
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/confirmTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="确定"
+                android:textColor="@android:color/holo_blue_light"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/cancelTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_toLeftOf="@id/confirmTv"
+                android:text="取消"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

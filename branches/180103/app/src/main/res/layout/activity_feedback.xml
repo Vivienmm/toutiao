@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/detail_comment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.chinaso.toutiao.view.CustomActionBar
+        android:id="@+id/feedbackActionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.chinaso.toutiao.view.BaseWebView
+        android:id="@+id/feedbackWV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/feedbackActionbar" />
+
+    <com.chinaso.toutiao.view.NetWorkErrorView
+        android:id="@+id/feedbackErrorview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <View style="@style/night_mode_style"
+        android:id="@+id/nightmode"/>
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/share_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp">
+
+    <TextView
+        android:id="@+id/tvButtonHome"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="主页"
+        android:drawableTop="@mipmap/webview_home"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/default_text_color"
+        android:gravity="center_horizontal"/>
+    <TextView
+        android:id="@+id/tvButtonShare"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="分享"
+        android:drawableTop="@mipmap/webview_share"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/default_text_color"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/tvButtonFresh"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="刷新"
+        android:drawableTop="@mipmap/webview_refresh_pressed"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/default_text_color"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/tvButtonCollection"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="收藏"
+        android:drawableTop="@mipmap/webview_collection_normal"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/default_text_color"
+        android:gravity="center_horizontal" />
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#e53935</color>
+    <color name="colorAccent">#EA413C</color>
+    <color name="colorPrimaryDark">#b71c1c</color>
+    <color name="colorAccentDark">#c62828</color>
+
+    <!--夜间/日间模式-->
+    <color name="dayBackground">#F2F4F7</color>
+    <color name="dayTextColor">#616161</color>
+    <color name="dayItemBackground">#fff</color>
+
+    <color name="nightItemBackground">#616161</color>
+    <color name="nightBackground">#424242</color>
+    <color name="nightTextColor">#F5F5F5</color>
+
+
+    <!-- common -->
+    <!-- 分割线背景色 -->
+    <drawable name="line_background">#161823</drawable>
+    <color name="divider">#DCDCDC</color>
+
+    <color name="menu_text_bg">#cccccc</color>
+    <color name="menu_text_bg_current">#EA413C</color>
+    <color name="menu_bg">#808080</color>
+    <color name="menu_white">#ffffff</color>
+    <color name="setting_bg">#E6EBF0</color>
+
+    <!--InputSearchActivity-->
+    <color name="txt_btn_search">#0780f7</color>
+    <color name="bg_topBar">#f7f7f7</color>
+    <color name="bg_search_listView">#ffffffff</color>
+    <color name="divider_search_listView">#f5f5f5</color>
+    <color name="bg_btn_loadMore">#f2f2f2</color>
+    <color name="bg_item_grid_hotWors">#f2f2f2</color>
+
+    <color name="white">#ffffff</color>
+    <color name="background_custom_bar">#B4110C</color>
+
+    <!-- 版本更新 -->
+    <color name="bg_btn_update">#2786c8</color>
+    <color name="bg_btn_cancel_update">#c8c8c8</color>
+
+    <color name="subscribe_tip_text">#ff2e2e2e</color>
+    <color name="subscribe_seperate_line">#ffcdcdcd</color>
+
+    <color name="txt_web_error">#82858b</color>
+    <color name="gray">#E8E8E8</color>
+    <color name="dark_gray">#9E9E9E</color>
+
+    <color name="default_text_color">#82858b</color>
+
+    <!-- 启动页标题 -->
+    <color name="txt_startup_title">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!--话题-->
+    <color name="txt_gray">#808080</color>
+    <color name="common_red">#F44336</color>
+
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#efefef"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/comment_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@color/white"
+        android:lines="2"
+        android:padding="10dp" />
+
+    <RelativeLayout
+        android:paddingBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/comment_cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingRight="10dp"
+            android:text="取消"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/comment_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/comment_confirm_xml"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:paddingRight="10dp"
+            android:text="发表"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+    </RelativeLayout>
+</LinearLayout>

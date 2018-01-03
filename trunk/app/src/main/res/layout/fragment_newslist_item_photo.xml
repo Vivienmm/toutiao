@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/newsitemLayout"
+    android:padding="10dp"
+    android:background="?attr/cslistbackground"
+    app:backgroundAttr="cslistbackground"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/titleTV"
+        android:textColor="?attr/cstextColor"
+        app:textColorAttr="cstextColor"
+        android:textSize="@dimen/newslist_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+        <ImageView
+            android:id="@+id/img"
+            android:scaleType="centerCrop"
+            android:layout_width="@dimen/newslist_img_width"
+            android:layout_height="@dimen/newslist_img_height" />
+        <ImageView
+            android:id="@+id/img02"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:layout_width="@dimen/newslist_img_width"
+            android:layout_height="@dimen/newslist_img_height" />
+        <ImageView
+            android:id="@+id/img03"
+            android:scaleType="centerCrop"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/newslist_img_width"
+            android:layout_height="@dimen/newslist_img_height" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/sourseTimeTV"
+        android:textSize="@dimen/newslist_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="?attr/cstextColor"
+        app:textColorAttr="cstextColor"/>
+</LinearLayout>

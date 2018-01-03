@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_personal_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.chinaso.toutiao.mvp.ui.activity.PersonalSettingActivity">
+
+    <com.chinaso.toutiao.view.CustomActionBar
+        android:id="@+id/personalSettingBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="基本信息" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true">
+            <TextView
+                style="@style/setting_text_new"
+                android:layout_weight="1"
+                android:text="邮箱" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/my_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/headPortraitLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/setting_text_new"
+                android:layout_weight="1"
+                android:text="头像" />
+
+            <ImageView
+                android:id="@+id/headPortraitImg"
+                style="@style/setting_text_new"
+                android:layout_width="wrap_content"
+                android:contentDescription="@null"
+                android:scaleType="center" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/my_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/namePortraitLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/setting_text_new"
+                android:layout_weight="1"
+                android:text="昵称" />
+
+            <TextView
+                android:id="@+id/nickNameTv"
+                style="@style/setting_text_new"
+                android:layout_width="wrap_content"
+                android:scaleType="center"
+                android:text="昵称" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/my_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sexSelectedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/setting_text_new"
+                android:layout_weight="1"
+                android:text="性别" />
+
+            <TextView
+                android:id="@+id/sexSelectedTV"
+                style="@style/setting_text_new"
+                android:layout_width="wrap_content"
+                android:text="男" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/my_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/birthDayLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/setting_text_new"
+                android:layout_weight="1"
+                android:text="生日" />
+
+            <TextView
+                android:id="@+id/birthDayTV"
+                style="@style/setting_text_new"
+                android:layout_width="wrap_content"
+                android:text="1970" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/my_arrow" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="跟帖设置" />
+
+        <LinearLayout
+            android:id="@+id/deviceNameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center_vertical">
+
+            <TextView
+                style="@style/setting_text_new"
+                android:layout_weight="1"
+                android:text="跟帖设置设备名称" />
+
+            <TextView
+                android:id="@+id/deviceNameTV"
+                style="@style/setting_text_new"
+                android:layout_width="wrap_content"
+                android:text="Android手机 " />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:src="@mipmap/my_arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/setting_text_new"
+                android:layout_weight="1"
+                android:paddingBottom="8dp"
+                android:text="匿名跟帖" />
+
+            <ImageView
+                android:id="@+id/modeImg"
+                android:layout_width="38dp"
+                android:layout_height="19dp"
+                android:background="@mipmap/switch_on" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:paddingLeft="20dp"
+            android:text="其他网友将不会看到你的用户名、头像和个人主页"
+            android:textColor="@color/menu_bg" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="10dp">
+
+            <Button
+                android:id="@+id/logoutBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:text="退出登录"
+                android:textColor="@color/white" />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</LinearLayout>

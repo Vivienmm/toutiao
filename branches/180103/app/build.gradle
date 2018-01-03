@@ -1,0 +1,176 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+greendao {
+    schemaVersion 1
+    daoPackage 'com.chinaso.toutiao.greendao.gen'
+    targetGenDir 'src/main/java'
+}
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.chinaso.toutiao"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1703021000
+        versionName "1.0"
+        externalNativeBuild {
+            cmake {
+                cppFlags "-frtti -fexceptions"
+            }
+        }
+        ndk {
+            abiFilters "armeabi-v7a", "x86"
+        }
+        multiDexEnabled true
+    }
+
+    dexOptions {
+//        javaMaxHeapSize "4g"
+        preDexLibraries = false
+        //jumboMode true
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+    }
+    signingConfigs {
+        release {
+            storeFile file('../chinaso_keystore')
+            storePassword "chinaso2015411;"
+            keyAlias "chinaso_key"
+            keyPassword "chinaso411;"
+        }
+        debug {
+            storeFile file('../chinaso_keystore')
+            storePassword "chinaso2015411;"
+            keyAlias "chinaso_key"
+            keyPassword "chinaso411;"
+        }
+    }
+    buildTypes {
+
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [isDebug: false]
+            zipAlignEnabled true  //可以让安装包中的资源按4字节对齐，这样可以减少应用在运行时的内存消耗
+            resValue "string", "app_name", "国搜头条"
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    if (output.outputFile != null && output.outputFile.name.endsWith('.apk')
+                            && 'release'.equals(variant.buildType.name)) {
+                        def apkFile = new File(
+                                output.outputFile.getParent(),
+                                "toutiao_${variant.versionName}.apk")
+                        output.outputFile = apkFile
+                    }
+                }
+            }
+        }
+
+        debug {
+            debuggable true
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            manifestPlaceholders = [isDebug: true]
+
+            applicationIdSuffix ".native"
+            resValue "string", "app_name", "头条"
+        }
+    }
+    productFlavors {
+        "001001_chinasoweb" {}
+//        "001002_hiapk" {}
+//        "001003_QQ"{}
+//        "001004_jfeng"{}
+//        "001006_xiaomi"{}
+//        "001007_meizu"{}
+//        "001008_anzhi"{}
+//        "001009_wandoujia"{}
+//        "001010_lenovo"{}
+//        "001011_baidu"{}
+//        "001012_MM"{}
+//        "001013_appchina"{}
+//        "001014_nduo"{}
+//        "001015_mumayi"{}
+//        "001016_360"{}
+//        "001017_91"{}
+//        "001018_huawei"{}
+//        "001019_guangdiantong"{}
+//        "001020_duocai"{}
+//        "001021_beijingyidong"{}
+//        "001022_oppo"{}
+//        productFlavors.all { flavor ->
+//            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+//        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        //Or, if you prefer, you can continue to check for errors in release builds,
+        //but continue the build even when errors are found:
+        abortOnError false
+        ignoreWarnings true
+    }
+
+}
+repositories {
+    mavenCentral()
+}
+allprojects {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://jitpack.io"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //新闻频道原生导航栏
+
+    //友盟分析
+    compile files('libs/picasso-2.5.2.jar')
+    compile files('libs/MiPush_SDK_Client_3_2_1.jar')
+    //RxJava
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.android.support:support-v4:25.1.1'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'org.greenrobot:greendao:3.0.1'
+    compile 'com.github.hackware1993:MagicIndicator:1.4.0'
+    compile 'com.android.support:design:25.1.1'
+    compile 'com.android.support:cardview-v7:25.1.1'
+    compile 'com.umeng.analytics:analytics:5.6.1'
+    compile 'com.github.bumptech.glide:glide:3.5.2'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'com.squareup.retrofit2:converter-scalars:2.1.0'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.1.6'
+    compile 'com.github.tajchert:WaitingDots:0.3.2'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.prolificinteractive:material-calendarview:1.4.3'
+    //第三方分享
+    compile files('libs/umeng_shareboard_widget.jar')
+    compile files('libs/umeng_social_shareboard.jar')
+    compile files('libs/umeng_social_shareview.jar')
+    compile files('libs/SocialSDK_douban.jar')
+    compile files('libs/SocialSDK_email.jar')
+    compile files('libs/SocialSDK_QQ_Simplify.jar')
+    compile files('libs/SocialSDK_sms.jar')
+    compile files('libs/SocialSDK_WeChat_Simplify.jar')
+    compile files('libs/umeng_social_api.jar')
+    compile files('libs/umeng_social_net.jar')
+    compile files('libs/umeng_social_tool.jar')
+
+    compile project(':changemodelibrary')
+}

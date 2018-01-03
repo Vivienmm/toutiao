@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_subscribe"
+    android:layout_width="72.0dip"
+    android:layout_height="30.0dip"
+    android:layout_margin="5dp"
+    android:background="@drawable/drag_bg">
+
+    <TextView
+        android:id="@+id/grid_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/subscribe_item_bg"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="#ff2e2e2e"
+        android:textSize="16sp">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/img_new_channel_func"
+        android:layout_width="25dp"
+        android:layout_height="12dp"
+        android:layout_gravity="end"
+        android:layout_marginRight="1dp"
+        android:layout_marginEnd="1dp"
+        android:gravity="top"
+        android:contentDescription="频道new"
+        android:src="@mipmap/newicon"
+        android:visibility="invisible" />
+
+</FrameLayout>
+

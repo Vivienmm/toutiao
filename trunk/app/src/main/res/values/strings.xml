@@ -1,0 +1,169 @@
+<resources>
+    <!--设置界面-->
+    <string name="txt_push">消息推送</string>
+    <string name="txt_state">夜间模式</string>
+    <string name="txt_notification">通知栏快速搜索</string>
+    <string name="txt_menu_bottom">自定义底部菜单</string>
+    <string name="txt_cache">清除缓存</string>
+    <string name="txt_back_cover">回看封面</string>
+    <string name="txt_collect">我的收藏</string>
+    <string name="txt_push_msg">我的推送</string>
+    <string name="txt_help">使用帮助</string>
+    <string name="txt_feed_back">意见反馈</string>
+    <string name="txt_check_update">检测新版本</string>
+    <string name="txt_about_us">关于我们</string>
+    <string name="txt_exit">退出手机国搜</string>
+    <string name="txt_logout">注销用户登录</string>
+    <string name="register_number">手机号码快速注册</string>
+    <string name="weixin_login">微信登录</string>
+
+    <!-- 版本更新 -->
+    <string name="txt_update_title">发现新版本</string>
+    <string name="check_ingore_update">忽略该版本</string>
+    <string name="txt_btn_update">立即更新</string>
+    <string name="txt_btn_cancel">以后再说</string>
+    <string name="no_new_version">没有新版本！</string>
+    <string name="no_wifi">没有wifi连接， 只在wifi下更新！</string>
+    <string name="no_network">连接失败，请检查网络设置！</string>
+    <string name="tv_version_fail">版本获取失败</string>
+
+    <!--历史记录页面-->
+    <string name="search_exit">取消</string>
+    <string name="search_hide_history">搜索历史</string>
+    <string name="search_clear_button">清空搜索记录</string>
+    <string name="clear_history_message">确定要清空全部历史记录</string>
+    <string name="search_text">搜索</string>
+    <!--频道管理-->
+    <string name="subscribe_more_category">更多频道</string>
+    <string name="subscribe_manager_category_info">单击增删频道</string>
+    <string name="subscribe_manager_category_info_2">单击增删频道，长按拖拽排序</string>
+    <string name="subscribe_my_category">我的频道</string>
+
+    <!--登录和注册-->
+    <string name="login_other_text">其他方式登录</string>
+    <string name="login">登录</string>
+    <string name="show_password">请输入密码</string>
+    <string name="forget_password">忘记密码？</string>
+    <string name="show_phone">请输入手机号</string>
+    <string name="register_phone">手机号</string>
+    <string name="register_pwd">短信验证码</string>
+    <string name="register_get_pwd">获取验证码</string>
+    <string name="register_set_pwd">密码</string>
+    <string name="register_get_confirmpwd">确认密码</string>
+    <string name="no_account">没有账号? </string>
+    <string name="login_register">快速注册</string>
+    <string name="register">注册</string>
+    <string name="register_agree_server">注册即同意</string>
+    <string name="chinaso_server_agree">国搜服务协议</string>
+    <string name="register_loda_failure">连接失败，请检查网络设置</string>
+    <string name="sendsmscode">验证码已发送</string>
+    <string name="user_name">昵称</string>
+    <string name="user_name_edit">手机国搜用户</string>
+    <string name="user_show_style">昵称默认为“用户+手机号后四位”，用户可修改</string>
+    <string name="user_photo">头像</string>
+    <string name="user_save">保存</string>
+    <string name="time_text">s后重新发送</string>
+
+    <!-- 收藏 -->
+    <string name="action_confirm_clear">您确认要清空所有收藏么？</string>
+    <string name="action_cancel">取消</string>
+    <string name="action_clear">清空</string>
+    <string name="not_interested">不感兴趣</string>
+    <string name="collect">收藏</string>
+    <string name="report_problem">反馈问题</string>
+    <string name="refresh">刷新</string>
+    <string name="mode_night">夜间模式</string>
+    <string name="edit_size">字体大小</string>
+    <string name="news_flag_fail">失败</string>
+    <string name="news_cancle_collect">已取消收藏</string>
+    <string name="news_collect">已收藏</string>
+    <string name="news_copy_success">复制成功</string>
+
+    <!-- 缓存已清除哦 -->
+    <string name="txt_clear_cache">缓存已清除哦</string>
+    <string name="register_success">注册成功</string>
+    <string name="confirm_pwd">两次输入的密码不一样</string>
+    <string name="not_signal">标记成功</string>
+
+    <string-array name="prefer_channel_name">
+        <item>要闻</item>
+        <item>社会</item>
+        <item>动漫</item>
+        <item>财经</item>
+        <item>教育</item>
+        <item>历史</item>
+        <item>旅游</item>
+        <item>美食</item>
+        <item>汽车</item>
+        <item>生活</item>
+        <item>时尚</item>
+        <item>探索</item>
+        <item>体育</item>
+        <item>养生</item>
+        <item>艺术</item>
+        <item>游戏</item>
+        <item>娱乐</item>
+        <item>搞笑</item>
+    </string-array>
+    <string-array name="prefer_channel_icon">
+        <item>@drawable/yaowen</item>
+        <item>@drawable/shehui</item>
+        <item>@drawable/dongman</item>
+        <item>@drawable/caijing</item>
+        <item>@drawable/jiaoyu</item>
+        <item>@drawable/lishi</item>
+        <item>@drawable/lvyou</item>
+        <item>@drawable/meishi</item>
+        <item>@drawable/qiche</item>
+        <item>@drawable/shenghuo</item>
+        <item>@drawable/shixiang</item>
+        <item>@drawable/tansuo</item>
+        <item>@drawable/tiyu</item>
+        <item>@drawable/yangsheng</item>
+        <item>@drawable/yishu</item>
+        <item>@drawable/youxi</item>
+        <item>@drawable/yule</item>
+        <item>@drawable/gaoxiao</item>
+    </string-array>
+
+
+    <string-array name="topic_quiz_name">
+        <item>时政</item>
+        <item>军事</item>
+        <item>汽车</item>
+        <item>旅游</item>
+        <item>教育</item>
+        <item>娱乐</item>
+        <item>体育</item>
+        <item>财经</item>
+        <item>互联</item>
+        <item>美图</item>
+        <item>美食</item>
+        <item>生活</item>
+        <item>国际</item>
+        <item>搞笑</item>
+        <item>社会</item>
+
+    </string-array>
+    <string-array name="topic_quiz_icon">
+        <item>@drawable/topic_ic_shizheng</item>
+        <item>@drawable/topic_ic_junshi</item>
+        <item>@drawable/topic_ic_qiche</item>
+        <item>@drawable/topic_ic_lvyou</item>
+        <item>@drawable/topic_ic_jiaoyu</item>
+        <item>@drawable/topic_ic_yule</item>
+        <item>@drawable/topic_ic_tiyu</item>
+        <item>@drawable/topic_ic_caijing</item>
+        <item>@drawable/topic_ic_hulianwang</item>
+        <item>@drawable/topic_ic_meitu</item>
+        <item>@drawable/topic_ic_meishi</item>
+        <item>@drawable/topic_ic_shenghuo</item>
+        <item>@drawable/topic_ic_guoji</item>
+        <item>@drawable/topic_ic_gaoxiao</item>
+        <item>@drawable/topic_ic_shehui</item>
+
+    </string-array>
+
+    <string name="not_impl_function">即将上线，敬请期待</string>
+
+</resources>
